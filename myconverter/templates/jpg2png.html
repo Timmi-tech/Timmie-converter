@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+
+{% block start %}
+<section class="position-relative py-6">
+    <img class="bg-image" src="/media/blog/3.jpg" alt="">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="bg-white rounded-lg shadow p-5"><strong class="text-uppercase text-secondary d-inline-block mb-2 text-sm">Welcome To Timmie Converter</strong>
+            <h2 class="mb-3">We Convert Jpg to Png here!!!</h2>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<div class="container mt-5">
+
+  <a href="" class="btn btn-warning">Convert Your Jpg to Png Here</a>
+
+  <form method="POST" class="mt-5 pt-5 mb-5 pb-5"
+        enctype="multipart/form-data" action="">
+      {% csrf_token %}
+      <div class="row">
+
+          <div class="col-md-12">
+            <b><label>Input Your Image Here</label></b>
+              <input type="file" name="image" class="form-control" >
+          </div>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-4">Convert</button>
+
+  </form>
+
+</div>
+
+{% comment %} <div class="container mt-5">
+
+  <a href="" class="btn btn-warning">Convert Your Image to Pdf Here</a>
+
+  <form method="post" class="mt-5 pt-5 mb-5 pb-5"
+        enctype="multipart/form-data" action="">
+      {% csrf_token %}
+      <div class="row">
+
+          <div class="col-md-12">
+              <input type="file" name="image" class="form-control" >
+          </div>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-4">Convert</button>
+
+  </form>
+
+</div> {% endcomment %}
+
+
+
+
+
+  {% endblock %}
